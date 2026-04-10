@@ -1,0 +1,45 @@
+Vendor Name,Vendor Code,Component Type,Unit Price (USD),Unit Price (EUR),Quantity,Subtotal (USD),Subtotal (EUR),Delivery Timeline (Days),Notes
+BudgetTech Pro,BTP-2026-Q1,Network Switch Enterprise,4200,3850,2,8400,7700,7,10 Gbps managed switch
+BudgetTech Pro,BTP-2026-Q1,Firewall Appliance,5800,5315,1,5800,5315,7,DDoS protection included
+BudgetTech Pro,BTP-2026-Q1,Server Rack Hardware,1200,1100,3,3600,3300,5,Includes mounting hardware
+BudgetTech Pro,BTP-2026-Q1,Cable & Connectivity,450,412,5,2250,2060,3,Cat6A shielded cables
+BudgetTech Pro,BTP-2026-Q1,Installation Service,80,73,160,12800,11680,0,160 labor hours included
+BudgetTech Pro,BTP-2026-Q1,Configuration Service,100,92,80,8000,7360,0,80 hours network setup
+BudgetTech Pro,BTP-2026-Q1,Training Package,120,110,3,360,330,14,3-day onsite staff training
+
+SUBTOTAL INVOICE A,,,,,,,40210,36745,,
+
+Vendor Name,Vendor Code,Component Type,Unit Price (USD),Unit Price (EUR),Quantity,Subtotal (USD),Subtotal (EUR),Delivery Timeline (Days),Notes
+SecurityFirst Corp,SFC-2026-A,Intrusion Detection Sys,12000,11000,1,12000,11000,10,IDS with 2-year subscription
+SecurityFirst Corp,SFC-2026-A,Endpoint Protection,35,32,2500,87500,80000,2,Per device annual license
+SecurityFirst Corp,SFC-2026-A,SIEM Platform,18500,16950,1,18500,16950,14,Security monitoring suite
+SecurityFirst Corp,SFC-2026-A,Backup Solution,6500,5955,2,13000,11910,7,500TB capacity each
+
+SUBTOTAL INVOICE B,,,,,,,131000,119860,,
+
+Vendor Name,Vendor Code,Component Type,Unit Price (USD),Unit Price (EUR),Quantity,Subtotal (USD),Subtotal (EUR),Delivery Timeline (Days),Notes
+ServiceDeployment Ltd,SDL-2026-PRO,Project Management,5000,4580,1,5000,4580,0,Full project oversight 8 weeks
+ServiceDeployment Ltd,SDL-2026-PRO,Implementation Team,200,183,240,48000,43920,0,240 hours technical delivery
+ServiceDeployment Ltd,SDL-2026-PRO,QA Testing,150,137,120,18000,16440,0,Comprehensive testing 120 hours
+ServiceDeployment Ltd,SDL-2026-PRO,Documentation,100,92,60,6000,5520,0,Complete documentation 60 hours
+
+SUBTOTAL INVOICE C,,,,,,,77000,70460,,
+
+TOTAL EQUIPMENT COST,,,,,,,40210,36745,,
+TOTAL SOFTWARE/SECURITY,,,,,,,131000,119860,,
+TOTAL SERVICES,,,,,,,77000,70460,,
+GRAND TOTAL (ALL INVOICES),,,,,,,,248210,227065,,USD,EUR
+
+CURRENCY CONVERSION RATES USED IN THIS QUOTE:
+Rate Date,USD/EUR,Note
+10-Apr-2026,1.0915,Standard market rate
+,,,
+IMPORTANT NOTES:,,,
+"1. Prices shown in both USD and EUR. Customer may request invoice in either currency.",,,
+"2. Timeline assumes customer provides access within 24 hours of PO.",,,
+"3. Additional shipping charges may apply for remote delivery locations.",,,
+"4. Payment terms: Net 30 days from invoice date",,,
+"5. These line items may be split across multiple invoices per customer request",,,
+6. All software licenses are annual subscriptions - renewal pricing TBD,,,
+"7. Travel costs NOT included (budgeted at $5,000 for on-site work)",,,
+8. Prices valid for 45 days,,,

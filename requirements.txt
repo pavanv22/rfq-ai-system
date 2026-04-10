@@ -5,9 +5,6 @@ python-multipart
 sqlalchemy
 sqlite-utils
 
-google-generativeai
-google-adk
-
 pdfplumber
 python-docx
 python-pptx
@@ -16,3 +13,4 @@ pytesseract
 Pillow
 
 langchain
+requests

@@ -1,0 +1,62 @@
+VENDOR QUOTATION - SECURETECH INDIA
+
+Company: SecureNet India Private Limited
+Registration: CIN-L74899DL2020PTC372451
+Contact Person: Rajesh Kumar
+Email: rajesh.kumar@securenetindia.com
+Phone: +91-11-4521-8800
+
+---PROJECT QUOTE DETAILS---
+
+Project: IT Infrastructure Upgrade - Network Security Module
+Quotation Reference: QT/2026/SNI/0847
+Quote Date: 10-April-2026
+Valid Until: 25-April-2026
+
+---PRICING BREAKDOWN (INCOMPLETE - Some costs missing)---
+
+1. Network Security Hardware
+   - Firewalls (2x Enterprise Grade): ₹1,200,000
+   - Intrusion Detection System: ₹450,000
+   - Load Balancers: ₹380,000
+   - Subtotal Hardware: ₹2,030,000
+
+2. Installation & Configuration
+   - Hardware Installation: 5 days @ ₹15,000/day = ₹75,000
+   - Network Configuration: 6 days @ ₹18,000/day = ₹108,000
+   - Security Policy Implementation: [COST NOT PROVIDED]
+   - Testing & Validation: ₹120,000
+   - Subtotal Services: ₹403,000
+
+3. Software Licenses
+   - Security Management Platform: ₹650,000
+   - Annual Support License: [PRICING TO BE CONFIRMED]
+   - Monitoring Tools: ₹180,000
+
+4. Training & Documentation
+   - Staff Training (3 days): ₹95,000
+   - Documentation Package: [OPTIONAL - COST TBD]
+
+---TIMELINE---
+Project Start: 15-May-2026
+Expected Completion: 31-May-2026
+Total Duration: 17 days
+
+---PRICE OPTIONS---
+Option A (Full Price): Approximately ₹3,600,000 - ₹4,200,000 (final breakdown pending)
+Option B (Without optional services): ₹3,200,000 (estimated)
+
+---PAYMENT TERMS---
+50% advance payment (₹1,800,000 - ₹2,100,000)
+50% upon completion
+
+---IMPORTANT NOTES---
+* Several cost items still being evaluated
+* Final quote will be provided after customer approval
+* All prices in Indian Rupees (INR)
+* Additional charges may apply for on-site accommodation
+* Assumes customer provides existing documentation
+
+---EXCHANGE RATE REFERENCE (for conversion purposes)---
+1 USD = ₹83.50 (as of 10-April-2026)
+1 EUR = ₹90.25 (as of 10-April-2026)

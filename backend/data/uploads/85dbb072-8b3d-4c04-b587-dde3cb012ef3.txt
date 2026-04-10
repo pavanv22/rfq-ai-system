@@ -1,0 +1,239 @@
+================================================================================
+                       GLOBAL IT SOLUTIONS - COMMERCIAL PROPOSAL
+================================================================================
+
+Prepared for: IT Department
+Prepared by: Sarah Thompson, Business Development Manager
+Company: GlobalIT Solutions International
+Date: April 8, 2026
+Proposal ID: GIS-2026-Q12480
+
+================================================================================
+                            EXECUTIVE SUMMARY
+================================================================================
+
+GlobalIT Solutions presents a comprehensive IT Infrastructure modernization 
+proposal for your organization. This quotation covers network infrastructure 
+assessment, upgrade, security implementation, and staff enablement across 
+multiple geographic locations.
+
+================================================================================
+                          PROJECT OVERVIEW
+================================================================================
+
+Scope: Enterprise-wide IT Infrastructure Modernization
+Duration: 35 business days (7 weeks)
+Geographic Coverage: 3 office locations
+Staff Affected: 2,500+ employees
+
+================================================================================
+                        PRICING STRUCTURE
+================================================================================
+
+NOTE: This proposal contains pricing in multiple currencies and includes 
+various cost methodologies. Please read carefully as some costs are labeled 
+differently in various sections.
+
+SECTION 1: HARDWARE COSTS
+─────────────────────────
+
+Primary Location (Headquarters):
+  • Network Equipment Bundle: $28,000 USD
+  • Server Infrastructure: $15,500 USD
+  • Storage Systems: $12,200 USD
+  • Security Appliances: $9,300 USD
+  Equipment Subtotal (HQ): $65,000 USD
+
+Secondary Location (Branch Office 1):
+  • Network Setup Package: €12,000 EUR
+  • Server Installation Kit: €8,500 EUR
+  • Storage (Redundant): €7,200 EUR
+  Equipment Subtotal (Branch 1): €27,700 EUR
+
+Tertiary Location (Remote Office):
+  • Compact Network Solution: £8,500 GBP
+  • Edge Computing Servers: £4,800 GBP
+  Equipment Subtotal (Branch 2): £13,300 GBP
+
+HARDWARE TOTAL: 
+  - USA Site: $65,000
+  - EU Site: €27,700 (~$29,900 USD equivalent)
+  - UK Site: £13,300 (~$16,851 USD equivalent)
+  - COMBINED ESTIMATE: ~$111,751 USD
+
+================================================================================
+                      PROFESSIONAL SERVICES
+================================================================================
+
+This section uses different terminology for similar work:
+
+Installation & Setup Fees:
+  • Physical Infrastructure Deployment: $18,000 USD
+  • Configuration Services: 40 hours @ $150/hour = $6,000 USD
+  • Site Preparation Labor: 6 person-days @ $1,200/day = $7,200 USD
+  Services Subtotal: $31,200 USD
+
+Consulting & Architecture:
+  • Infrastructure Design Consultation: €8,000 EUR
+  • Technical Architecture Review: €4,500 EUR
+  • Project Management (52 weeks): 2 hours/week @ €125/hour = €13,000 EUR
+  Consulting Subtotal: €25,500 EUR (~$27,540 USD equivalent)
+
+Support & Enablement:
+  • Staff Training Programs: 60 hours @ $125/hour = $7,500 USD
+  • Knowledge Transfer Sessions: 20 hours @ $100/hour = $2,000 USD
+  • 90-day Post-Implementation Support: $12,000 USD
+  • Helpdesk Setup & Configuration: $5,500 USD
+  Support Subtotal: $27,000 USD
+
+SERVICES TOTAL: $85,740 USD + €25,500 EUR
+
+================================================================================
+                          SOFTWARE LICENSES
+================================================================================
+
+Operating System Licenses:
+  • Windows Server 2022 (20 licenses): $18,000 USD
+  • Linux Enterprise subscriptions (30 seats): £12,500 GBP
+
+Database Licenses:
+  • SQL Server Enterprise (2 cores): $22,000 USD
+  • Backup/Recovery Software (250 GB): ₹850,000 INR
+
+Security & Monitoring:
+  • Endpoint Protection (2,500 users): $45,000 USD
+  • Security Information & Event Management: €35,000 EUR
+  • Network Monitoring Platform: $15,000 USD
+
+SOFTWARE TOTAL: Multiple currencies as listed above
+
+================================================================================
+                    PRICE VARIATIONS & NAMING CONVENTIONS
+                    
+The following terms are used interchangeably in this quote:
+
+• "Project Fee" = Sum of all labor and consulting costs
+• "Total Implementation Cost" = All hardware + services + licenses
+• "Grand Total for Execution" = Final deliverable-inclusive price
+• "Complete Solution Investment" = Full scope with optional items
+
+The customer may reference any of these terms in payment discussions.
+
+================================================================================
+                          PAYMENT OPTIONS
+================================================================================
+
+STANDARD TERMS:
+  Option 1: 40% due upon signature, 30% at project midpoint, 30% at completion
+  Option 2: 100% due within 30 days of invoice (5% discount available)
+  Option 3: Monthly installments over 6 months at 2.5% monthly interest
+
+All prices are subject to 15% currency fluctuation clause if quotes not 
+accepted within 30 days.
+
+================================================================================
+                          TIMELINE & PHASES
+================================================================================
+
+PHASE 1: ASSESSMENT & PLANNING (Days 1-7)
+  • Current infrastructure audit
+  • Requirements validation
+  • Design documentation creation
+  • Risk assessment & mitigation planning
+
+PHASE 2: PROCUREMENT & STAGING (Days 8-14)
+  • Equipment acquisition & arrival
+  • Pre-deployment testing
+  • Staging environment setup
+
+PHASE 3: DEPLOYMENT (Days 15-28)
+  • Hardware installation (all 3 sites, coordinated)
+  • Network configuration
+  • Data migration
+  • System optimization
+
+PHASE 4: SECURITY HARDENING (Days 21-32) [Note: overlaps with Phase 3]
+  • Firewall configuration
+  • Access control implementation
+  • Security policy deployment
+  • Compliance verification
+
+PHASE 5: TRAINING & HANDOVER (Days 29-35)
+  • Staff training sessions
+  • Technical handover
+  • Documentation delivery
+  • Support transition
+
+================================================================================
+                        EXCLUSIONS & ASSUMPTIONS
+================================================================================
+
+NOT INCLUDED in this quote:
+  ☐ Customer datacenter renovations or facility upgrades
+  ☐ Third-party software integrations (e.g., custom CRM connections)
+  ☐ Extended warranty beyond standard (available as add-on)
+  ☐ Travel & accommodation costs beyond budgeted allowance
+  ☐ Disaster recovery site setup
+  ☐ Post-warranty support beyond 90 days
+
+ASSUMPTIONS:
+  • Customer will provide all necessary access and credentials
+  • Existing infrastructure will remain operational during transition
+  • Customer will allocate internal resources for coordination
+  • Required software licenses are customer-provided where applicable
+  • Network infrastructure supports 10 Gbps connectivity
+
+================================================================================
+                        REFERENCES & CASE STUDIES
+================================================================================
+
+Similar projects successfully completed for:
+
+1. Fortune 500 Technology Company
+   - 5,000+ user infrastructure modernization
+   - 4 geographic locations across 3 continents
+   - Timeline: 12 weeks | Budget: $1.2M USD
+   - Outcome: 40% performance improvement, 99.95% uptime achieved
+
+2. European Financial Services Firm
+   - 2,000+ user network upgrade
+   - 2 data center migration
+   - Timeline: 8 weeks | Budget: €850K EUR
+   - Outcome: Zero unplanned downtime, audit compliance achieved
+
+3. Asia-Pacific Telecommunications Provider
+   - 3,500+ user infrastructure overhaul
+   - 6 interconnected sites
+   - Timeline: 10 weeks | Budget: ₹7.5 Crore INR (~$900K USD)
+   - Outcome: Network capacity increased 5x, cost savings 20% annually
+
+================================================================================
+                          TERMS & CONDITIONS
+================================================================================
+
+• This quote is valid for 30 calendar days
+• Prices subject to change if project scope changes
+• All estimates based on Q2 2026 market rates
+• Requires minimum 50% deposit to commence work
+• Changes requested after Phase 2 may result in additional charges
+• Service Level Agreement: 99.5% infrastructure availability guarantee
+
+================================================================================
+                          NEXT STEPS
+================================================================================
+
+1. Review this proposal carefully
+2. Identify any required modifications or clarifications
+3. Approve scope and budget authorization
+4. Return executed purchase order
+5. Contact us to schedule detailed project kickoff meeting
+
+Contact Information:
+  Phone: +1-555-0444 (US) | +44-121-555-0555 (UK) | +49-30-5555-0666 (DE)
+  Email: proposals@globalit-solutions.com
+
+Thank you for considering GlobalIT Solutions for your infrastructure needs.
+
+================================================================================
+                          [END OF QUOTATION]
+================================================================================

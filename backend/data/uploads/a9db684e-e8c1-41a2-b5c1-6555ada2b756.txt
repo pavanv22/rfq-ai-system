@@ -1,0 +1,78 @@
+================================================================
+                    VENDOR QUOTATION
+================================================================
+
+VENDOR: TechCore Solutions
+Contact: John Smith
+Email: john@techcoresol.com
+Phone: +1-555-0101
+
+================================================================
+QUOTE SUMMARY
+================================================================
+
+Project: IT Infrastructure Upgrade
+Quote Amount: $45,000 USD
+Timeline: 3 weeks
+Quote Date: 2026-04-11
+Valid Until: 2026-04-25
+
+================================================================
+SCOPE OF WORK
+================================================================
+
+1. Network Infrastructure Assessment
+   - Physical network audit
+   - Current performance analysis
+   - Capacity planning report
+
+2. Infrastructure Upgrade
+   - Deploy 10 Gbps switches
+   - Install redundant connections
+   - Configure failover systems
+   - Testing and validation
+
+3. Security Hardening
+   - Firewall configuration
+   - Access control implementation
+   - Security monitoring setup
+   - Compliance audit
+
+4. Documentation & Training
+   - Complete technical documentation
+   - Staff training (2 days on-site)
+   - Knowledge transfer sessions
+
+================================================================
+PAYMENT TERMS
+================================================================
+
+- 50% upfront upon contract signature
+- 50% upon successful completion and UAT approval
+
+================================================================
+DELIVERY TIMELINE
+================================================================
+
+- Week 1: Planning & Assessment
+- Week 2: Infrastructure Deployment
+- Week 3: Security Implementation & Testing
+
+Estimated completion: 21 calendar days
+
+================================================================
+SERVICE LEVEL AGREEMENT
+================================================================
+
+- 99.9% infrastructure uptime guarantee
+- 4-hour response time for issues
+- 24/7 monitoring and support included for 30 days post-implementation
+
+================================================================
+ADDITIONAL BENEFITS
+================================================================
+
+- Free consultation hours included
+- Priority bug fixes
+- Extended 1-year hardware warranty
+- Dedicated account manager

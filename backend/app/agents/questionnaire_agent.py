@@ -35,7 +35,7 @@ import json
 
 OLLAMA_API_URL = "http://localhost:11434/api/generate"
 # MODEL = "tinyllama:latest"
-MODEL = "llama3:8b"  # Updated model name
+MODEL = "llama3:latest"  # Updated model name
 
 def clean_json(text):
     return text.replace("```json", "").replace("```", "").strip()  

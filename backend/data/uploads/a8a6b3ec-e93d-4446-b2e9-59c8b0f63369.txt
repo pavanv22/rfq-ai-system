@@ -1,0 +1,411 @@
+================================================================================
+                    VENDOR PROPOSAL - CONTAINS IMAGE REFERENCES
+                         (Simulating PPT with embedded images)
+================================================================================
+
+Company: InnovateTech Services
+Contact: David Martinez
+Email: david@innovatetech.com
+Phone: +1-555-0999
+
+================================================================================
+COVER SLIDE / IMAGE 1
+================================================================================
+
+[IMAGE REFERENCE]
+File: vendorproposal_cover.png
+Content: Professional company branding slide with:
+- Company logo (500x500 px)
+- Project title: "IT Infrastructure Modernization"
+- Date: April 11, 2026
+- Contact information and website
+
+================================================================================
+PRICING SUMMARY SLIDE / IMAGE 2
+================================================================================
+
+[IMAGE REFERENCE]
+File: pricing_breakdown_chart.png
+Description: Pie chart showing cost breakdown:
+- Hardware: $62,000 (40%)
+- Software: $31,000 (20%)
+- Services: $46,500 (30%)
+- Support: $15,500 (10%)
+
+Total Project Cost (shown in large red text): $155,000 USD
+
+Key metrics displayed:
+- Timeline: 8 weeks
+- Team Size: 8 people
+- Availability: 99.9%
+- Support: 24/7 for 90 days
+
+================================================================================
+PROJECT TIMELINE SLIDE / IMAGE 3
+================================================================================
+
+[IMAGE REFERENCE]
+File: gantt_chart_timeline.png
+Description: Gantt chart showing:
+
+Week 1-2: [████] Assessment & Design
+Week 2-3: [████] Procurement & Staging  
+Week 4-6: [████████] Deployment Phase
+Week 6-7: [████] Optimization & Testing
+Week 7-8: [████] Knowledge Transfer & Handover
+
+Critical Path: Deployment phase (shown in red)
+Dependencies: Design approval required before procurement
+Milestones marked at weeks 2, 4, 6, and 8
+
+Color coding:
+- Green: Completed/On-track
+- Yellow: At-risk items
+- Red: Critical path items
+- Blue: Completed deliverables
+
+================================================================================
+NETWORK ARCHITECTURE DIAGRAM / IMAGE 4
+================================================================================
+
+[IMAGE REFERENCE]
+File: network_architecture_diagram.png
+Description: Complex network topology diagram showing:
+
+┌─────────────────────────────────────────────────────────────┐
+│                     INTERNET (ISP)                           │
+│                    Dual 10Gbps Links                         │
+└─────────────────────────────────────────────────────────────┘
+         │                                          │
+    [Firewall 1]                                [Firewall 2]
+    (Primary)                                  (Redundant)
+         │                                          │
+    ┌────┴──────────────────────────────────────────┴────┐
+    │     CORE NETWORK LAYER (Redundant Nexus 9000)     │
+    │        Active-Active Configuration                │
+    │     Throughput: 10 Gbps, Latency: <5ms          │
+    └───┬──────────────────────────────────────────┬────┘
+        │                                          │
+    [Agg 1]                                    [Agg 2]
+    Aggregation Switches (1 Gbps uplink)
+        │                                          │
+   ┌────┴─────────┬──────────┬─────────┬──────────┴────┐
+   │              │          │         │               │
+[Server] [Storage] [Backup] [DB]  [App Server]  [Monitoring]
+ Cluster  Area Net  Target  Node    Cluster       Node
+ 4x 2x    50TB SAN  100TB   High    Load          SIEM
+ 32-core  + 3yr    Arch    Avail   Balanced
+ 384GB    Rep                        App Pool
+
+┌─────────────────────────────────────────────────────────────┐
+│    SECURITY LAYER: Firewalls, IDS/IPS, DLP (Inline)        │
+│    Monitoring: 24/7 SOC, Threat Intelligence Feed          │
+└─────────────────────────────────────────────────────────────┘
+
+Legend:
+  [Component] = Physical device/cluster
+  ─────────── = Network link with specs
+  ││││││││││ = Redundant connection (failover)
+  ◇◇◇◇◇◇◇◇◇◇ = Security inspection point
+
+Redundancy: N+1 on all critical components
+Failover: Automatic sub-second cutover
+Performance SLA: 99.95% availability
+
+================================================================================
+SECURITY POSTURE DIAGRAM / IMAGE 5
+================================================================================
+
+[IMAGE REFERENCE]
+File: security_layers_visualization.png
+Description: Concentric circles showing security zones:
+
+Layer 1 (Outer): DDoS Protection & ISP Filtering
+Layer 2: Firewall with Threat Prevention
+Layer 3: Intrusion Detection/Prevention System (IDS/IPS)
+Layer 4: Data Loss Prevention (DLP) & Content Filtering
+Layer 5: Endpoint Protection & Malware Defense
+Layer 6 (Inner): Application-Level Security & Encryption
+
+Center: Protected Assets
+- Customer Data (GDPR encrypted)
+- Financial Records (PCI-DSS compliant)
+- Intellectual Property (Access controlled)
+- User Credentials (Vault encrypted)
+
+Color coding:
+- Red Zone: Untrusted Internet
+- Orange Zone: Perimeter Defense
+- Yellow Zone: Network Defense
+- Green Zone: Secure Assets
+
+Protection Level: 85% improved threat prevention vs. current
+Detection Time: <5 seconds for anomalies
+Response Time: <2 minutes automated remediation
+
+================================================================================
+PERFORMANCE METRICS DASHBOARD / IMAGE 6
+================================================================================
+
+[IMAGE REFERENCE]
+File: performance_metrics_dashboard.png
+Description: Multi-panel monitoring dashboard showing:
+
+UPTIME CHART (Line graph):
+Current: 95.2%  →  Proposed: 99.95%
+[Shows trending over 90 days, reaching target by week 4]
+
+LATENCY HISTOGRAM:
+Response Times: P50=4ms, P95=12ms, P99=28ms
+Target: <15ms average ✓ ACHIEVES TARGET
+
+THROUGHPUT GAUGE:
+Current: 2 Gbps  →  New: 5 Gbps capacity
+Utilization: 35% (room for growth)
+
+SECURITY SCORE:
+Current: 42/100  →  Target: 92/100
+Achieved through: Encryption, MFA, monitoring, patching
+
+COST REDUCTION FORECAST:
+Year 1 savings: $150,000 (OpEx reduction)
+Year 2 savings: $200,000 (cumulative)
+Payback period: 2.3 years
+
+================================================================================
+TEAM EXPERTISE SLIDE / IMAGE 7
+================================================================================
+
+[IMAGE REFERENCE]
+File: team_expertise_matrix.png
+Description: Matrix showing team skillsets:
+
+                   Network  Security  Server  Storage  Project  Vendor
+                   Design   Arch      Admin   Mgmt     Mgmt     Mgmt
+Director           ██████░░ ██████░░ ██████░░ ██████░░ ████████ ████████
+Arch Lead          ████████ ████████ ██████░░ ██████░░ ██████░░ ██████░░
+Network Specialist ████████ ██████░░ ████░░░░ ████░░░░ ██░░░░░░ ██░░░░░░
+Security Engineer  ██████░░ ████████ ██████░░ ████░░░░ ██░░░░░░ ██░░░░░░
+Systems Admin      ████░░░░ ██████░░ ████████ ████████ ██░░░░░░ ██░░░░░░
+Storage Specialist ██░░░░░░ ██░░░░░░ ████░░░░ ████████ ██░░░░░░ ██░░░░░░
+
+Legend:
+████████ = Expert (15+ years)
+██████░░ = Advanced (10+ years)
+████░░░░ = Intermediate (5+ years)
+██░░░░░░ = Qualified (2+ years)
+
+Total Team Experience: 127 person-years
+Average Experience: 15.9 years
+Certifications: 18 active industry certifications
+
+================================================================================
+SUCCESS FACTORS SUMMARY - IMAGE REFERENCE 8
+================================================================================
+
+[IMAGE REFERENCE]
+File: success_factors_infographic.png
+
+Key Success Factors Highlighted:
+
+✓ Planning (Weight: 15%)
+  - Detailed assessment
+  - Risk identification
+  - Stakeholder alignment
+
+✓ Technology (Weight: 25%)
+  - Proven platforms
+  - Redundant design
+  - Security-first architecture
+
+✓ People (Weight: 30%)
+  - Experienced team
+  - Quality staff training
+  - Knowledge transfer
+
+✓ Process (Weight: 20%)
+  - Proven methodology
+  - Change management
+  - Quality gates at each phase
+
+✓ Partnership (Weight: 10%)
+  - Close collaboration
+  - Transparent communication
+  - Regular reporting
+
+Weighted Success Probability: 99.2%
+(Based on historical project database of 200+ similar projects)
+
+================================================================================
+VENDOR QUALIFICATIONS - COMPARISON CHART / IMAGE 9
+================================================================================
+
+[IMAGE REFERENCE]
+File: vendor_comparison_matrix.png
+Description: Side-by-side comparison showing:
+
+Criteria               InnovateTech    Competitor A    Competitor B
+─────────────────────────────────────────────────────────────────
+Experience (years)        18+              12              8
+Similar Projects          150              80              35
+Team Size Available       25               12              8
+CERTIFICATIONS:
+  ISO 9001             ✓                ✓                ✗
+  ISO 27001            ✓                ✗                ✗
+  SOC 2 Type II        ✓                ✗                ✗
+  PCI-DSS L1           ✓                ✗                ✗
+SUPPORT:
+  24/7 Available       ✓                ✓ (15 hrs/day)   ✗ (9-5)
+  Dedicated Team       ✓                ✗                ✗
+  SLA Guarantee        ✓ 99.9%          ✗ (best effort)  ✗ (best effort)
+PRICING:
+  Fixed Price          ✓                ✗ (T&M)          ✓
+  Cost Certainty       ✓                ✗ (Variable)     ~
+  Value for Money      ★★★★★           ★★★☆☆           ★★☆☆☆
+
+Overall Rating:      InnovateTech RECOMMENDED ✓✓✓
+
+================================================================================
+RISK MITIGATION INFOGRAPHIC / IMAGE 10
+================================================================================
+
+[IMAGE REFERENCE]
+File: risk_mitigation_plan.png
+
+Risk Level Distribution Before/After:
+
+BEFORE Implementation:
+Critical Risks    ████████  (8)  → High business impact
+High Risks        ██████    (6)  → Potential downtime
+Medium Risks      ████      (4)  → Operational impact
+Low Risks         ██        (2)  → Minor issues
+
+AFTER Implementation with Mitigation:
+Critical Risks    ░░░░░░░░  (0)  ✓ Eliminated
+High Risks        ░░        (1)  ✓ Residual only
+Medium Risks      ░░░░░░    (1)  ✓ Residual only
+Low Risks         ████      (4)  → Acceptable risks
+
+Risk Reduction:   72% of risks eliminated or mitigated
+Mitigation Success: 92% based on historical data
+
+================================================================================
+CONTRACTUAL TERMS SUMMARY / IMAGE 11
+================================================================================
+
+[IMAGE REFERENCE]
+File: contract_terms_visualization.png
+
+PAYMENT SCHEDULE:
+Month 0:   Down Payment 30% ──▐███───────┤ $46,500
+Month 3:   Progress       60% ──▐██████───┤ $62,000
+Month 5:   Final          100% ─▐███▌─────┤ $46,500
+                                            ─────────
+                                Total:      $155,000
+
+WARRANTY COVERAGE (Months):
+Hardware:          ├─────────────────────────────────────────┤ 12 months
+Software:          ├──────────────────────────────┤ 7 months
+Implementation:    ├─────────────────────────────┤ 6 months
+Support:           ├─────────────────────────────────────────────────┤ 15 months
+                   │                                                  │
+                   Months: 0  1  2  3  4  5  6  7  8  9  10 11 12 13 14 15
+
+LIABILITY INSURANCE:
+General Liability:      $5,000,000 USD  ✓ Verified
+Professional Liability: $2,000,000 USD  ✓ Verified
+Cyber Liability:        $10,000,000 USD ✓ Verified
+
+================================================================================
+REFERENCES - LOGOS & TESTIMONIES / IMAGE 12
+================================================================================
+
+[IMAGE REFERENCE]
+File: client_references_wordcloud.png
+
+Three previous clients visible (company logos and testimonials):
+
+Client 1: [LOGO] Fortune 500 Technology
+"EISI delivered on time and on budget. Their team was professional and 
+responsive to our needs. Highly recommended."
+
+Client 2: [LOGO] Financial Services
+"The quality of their work exceeded our expectations. They went above and 
+beyond to ensure success."
+
+Client 3: [LOGO] Healthcare Organization
+"Outstanding technical expertise combined with excellent project management. 
+We would engage them again without hesitation."
+
+Success Rate: 98.2% project completion on time
+Client Retention: 92% repeat business from previous clients
+NPS Score: 8.7/10 average Net Promoter Score
+
+================================================================================
+CLOSING VISUAL / IMAGE 13
+================================================================================
+
+[IMAGE REFERENCE]
+File: proposal_closing_summary.png
+
+Visual Summary (Infographic):
+
+┌─────────────────────────────────────────────────────────────┐
+│       TRANSFORMING YOUR IT INFRASTRUCTURE                   │
+│                                                             │
+│  FROM:                    TO:                              │
+│  ───────────────────      ───────────────────              │
+│  95% Uptime        →      99.9% Uptime     ✓              │
+│  Manual Processes  →      Automated         ✓              │
+│  High OpEx         →      30% Cost Reduced  ✓              │
+│  Security Gaps     →      Compliance Ready  ✓              │
+│  Single Point Fail →      Fully Redundant   ✓              │
+│  Legacy Systems    →      Modern Cloud-Ready ✓             │
+│                                                             │
+│  Timeline: 8 weeks                                          │
+│  Investment: $155,000 USD                                   │
+│  ROI: 2.3 years                                             │
+│  Payback: $200,000+ annual savings                          │
+│                                                             │
+│  Let's transform your infrastructure TODAY.                │
+│  Contact: david@innovatetech.com | +1-555-0999            │
+│                                                             │
+└─────────────────────────────────────────────────────────────┘
+
+================================================================================
+APPENDIX: IMAGE METADATA
+================================================================================
+
+The images referenced in this document contain critical information that
+cannot be extracted from text alone. Each image provides:
+
+1. pricing_breakdown_chart.png - Charts and percentages in visual format
+2. gantt_chart_timeline.png - Dependency visualization
+3. network_architecture_diagram.png - Topology relationships
+4. security_layers_visualization.png - Defense-in-depth strategy
+5. performance_metrics_dashboard.png - Real-time metrics visualization
+6. team_expertise_matrix.png - Skill matrix data
+7. success_factors_infographic.png - Weight distribution
+8. vendor_comparison_matrix.png - Competitive analysis
+9. risk_mitigation_plan.png - Before/after comparison
+10. contract_terms_visualization.png - Payment and warranty timeline
+11. client_references_wordcloud.png - Reference testimonials with logos
+12. proposal_closing_summary.png - Final summary infographic
+
+All images contain:
+- Color-coded information
+- Embedded text (prices, percentages, labels)
+- Visual relationships
+- Icons and symbols
+- Charts and graphs
+- Logos and branding
+
+This file demonstrates how system must handle:
+✓ Image references embedded in text
+✓ Visual data that supplements pricing
+✓ Multi-media proposal structure
+✓ Data split across visual and text elements
+
+================================================================================
+END OF VENDOR PROPOSAL WITH IMAGE REFERENCES
+================================================================================

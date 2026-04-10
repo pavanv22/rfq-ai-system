@@ -1,0 +1,128 @@
+[
+  {
+    "vendor_name": "TechCore Solutions",
+    "total_cost": 45000.0,
+    "currency": "USD",
+    "timeline_weeks": 3,
+    "scope_coverage": [],
+    "key_terms": [],
+    "total_cost_usd": 45000.0
+  },
+  {
+    "vendor_name": "CloudFirst Systems GmbH",
+    "total_cost": null,
+    "currency": "USD",
+    "timeline_weeks": 4,
+    "scope_coverage": [],
+    "key_terms": [],
+    "total_cost_usd": 0.0
+  },
+  {
+    "vendor_name": "SecureNet India Private Limited",
+    "total_cost": null,
+    "currency": "USD",
+    "timeline_weeks": 1,
+    "scope_coverage": [],
+    "key_terms": [],
+    "total_cost_usd": 0.0
+  },
+  {
+    "vendor_name": "TechCore Solutions",
+    "total_cost": 45000.0,
+    "currency": "USD",
+    "timeline_weeks": 3,
+    "scope_coverage": [],
+    "key_terms": [],
+    "total_cost_usd": 45000.0
+  },
+  {
+    "vendor_name": "CloudFirst Systems GmbH",
+    "total_cost": null,
+    "currency": "USD",
+    "timeline_weeks": 4,
+    "scope_coverage": [],
+    "key_terms": [],
+    "total_cost_usd": 0.0
+  },
+  {
+    "vendor_name": "SecureNet India Private Limited",
+    "total_cost": null,
+    "currency": "USD",
+    "timeline_weeks": 1,
+    "scope_coverage": [],
+    "key_terms": [],
+    "total_cost_usd": 0.0
+  },
+  {
+    "vendor_name": "SecureNet India Private Limited",
+    "total_cost": null,
+    "currency": "USD",
+    "timeline_weeks": 1,
+    "scope_coverage": [],
+    "key_terms": [],
+    "total_cost_usd": 0.0
+  },
+  {
+    "vendor_name": "TechCore Solutions",
+    "total_cost": 45000.0,
+    "currency": "USD",
+    "timeline_weeks": 3,
+    "scope_coverage": [],
+    "key_terms": [],
+    "total_cost_usd": 45000.0
+  },
+  {
+    "vendor_name": "CloudFirst Systems GmbH",
+    "total_cost": null,
+    "currency": "USD",
+    "timeline_weeks": 4,
+    "scope_coverage": [],
+    "key_terms": [],
+    "total_cost_usd": 0.0
+  },
+  {
+    "vendor_name": "SecureNet India Private Limited",
+    "total_cost": null,
+    "currency": "USD",
+    "timeline_weeks": 1,
+    "scope_coverage": [],
+    "key_terms": [],
+    "total_cost_usd": 0.0
+  },
+  {
+    "vendor_name": "SecureNet India Private Limited",
+    "total_cost": 1200000.0,
+    "currency": "INR",
+    "timeline_weeks": 1,
+    "scope_coverage": [],
+    "key_terms": [],
+    "total_cost_usd": 14400.0
+  },
+  {
+    "vendor_name": "InnovateTech Services",
+    "total_cost": 62000.0,
+    "currency": "USD",
+    "timeline_weeks": 8,
+    "scope_coverage": [],
+    "key_terms": [],
+    "total_cost_usd": 62000.0
+  },
+  {
+    "vendor_name": "GlobalIT Solutions International",
+    "total_cost": 28000.0,
+    "currency": "USD",
+    "timeline_weeks": 7,
+    "scope_coverage": [],
+    "key_terms": [],
+    "total_cost_usd": 28000.0
+  },
+  {
+    "vendor_name": "CloudFirst Systems GmbH",
+    "total_cost": 42000.0,
+    "currency": "EUR",
+    "timeline_weeks": 4,
+    "scope_coverage": [],
+    "key_terms": [],
+    "total_cost_usd": 45360.0
+  }
+]

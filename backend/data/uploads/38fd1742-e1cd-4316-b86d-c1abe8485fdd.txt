@@ -1,0 +1,97 @@
+================================================================
+                    COMMERCIAL QUOTATION
+================================================================
+
+VENDOR: CloudFirst Systems GmbH
+Company Registration: DE-123456789
+Contact: Maria Keller
+Email: m.keller@cloudfirst.de
+Phone: +49-30-5555-0202
+
+================================================================
+QUOTE DETAILS
+================================================================
+
+Project: IT Infrastructure Upgrade
+Quote Amount: €42,000 EUR
+Timeline: 4 weeks
+Quote Date: 2026-04-10
+Validity: 30 days from date
+
+================================================================
+PROJECT SCOPE
+================================================================
+
+Phase 1: Infrastructure Planning (5 days)
+- Requirements gathering
+- Current system assessment
+- Design documentation
+- Stakeholder approval
+
+Phase 2: Core Infrastructure Setup (8 days)
+- Network architecture implementation
+- Server provisioning and configuration
+- Storage system setup
+- Backup solutions deployment
+
+Phase 3: Security & Compliance (6 days)
+- Security infrastructure implementation
+- Compliance framework setup
+- Data protection implementation
+- Penetration testing
+
+Phase 4: Deployment & Optimization (7 days)
+- Full system deployment
+- Performance optimization
+- Staff training
+- Go-live support
+
+================================================================
+DELIVERABLES
+================================================================
+
+✓ Network infrastructure blueprint
+✓ Security policy documentation
+✓ Staff training materials (English & German)
+✓ 6 months operational handover support
+✓ Maintenance plan documentation
+✓ Disaster recovery procedures
+
+================================================================
+PAYMENT STRUCTURE
+================================================================
+
+Invoice 1 (30%): Upon contract signing - €12,600
+Invoice 2 (40%): At 50% project completion - €16,800
+Invoice 3 (30%): Upon completion - €12,600
+
+Optional: Financing available with 0% interest for 12 months
+
+================================================================
+TIMELINE BREAKDOWN
+================================================================
+
+Start Date: 2026-04-21
+Week 1-2: Planning & Design
+Week 3: Infrastructure Deployment
+Week 4: Testing & Optimization
+Completion: 2026-05-19 (28 calendar days)
+
+================================================================
+SUPPORT & WARRANTIES
+================================================================
+
+- 12-month premium support included
+- Hardware replacement warranty: 3 years
+- Software update guarantees for 2 years
+- Quarterly optimization reviews
+- Dedicated support engineer assigned
+
+================================================================
+REFERENCES
+================================================================
+
+Successfully completed similar projects for:
+- Deutsche Bank (2500+ users)
+- Siemens Engineering (1800+ users)
+- Bosch Manufacturing (2000+ users)
