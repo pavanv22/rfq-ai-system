@@ -68,16 +68,17 @@ def run_scoring(
         }
         
         # Convert ORM models to dicts for scoring
+        # Ensure all None values are converted to meaningful defaults
         vendor_dicts = [
             {
                 "id": v.id,
-                "vendor_name": v.vendor_name,
+                "vendor_name": v.vendor_name or "Unknown Vendor",
                 "total_cost": v.total_cost,
-                "currency": v.currency,
-                "total_cost_usd": v.total_cost_usd,
-                "timeline_weeks": v.timeline_weeks,
-                "scope_coverage": v.scope_coverage,
-                "key_terms": v.key_terms,
+                "currency": v.currency or "USD",
+                "total_cost_usd": v.total_cost_usd or 0,  # Default to 0 if None
+                "timeline_weeks": v.timeline_weeks or 4,  # Default to 4 weeks if None
+                "scope_coverage": v.scope_coverage or [],  # Default to empty list if None
+                "key_terms": v.key_terms or [],  # Default to empty list if None
                 "compliance_score": v.compliance_score
             }
             for v in vendors

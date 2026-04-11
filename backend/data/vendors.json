@@ -357,5 +357,70 @@
     ],
     "key_terms": [],
     "total_cost_usd": 8500000.0
+  },
+  {
+    "vendor_name": "ThinkBig Creative Agency Pvt. Ltd.",
+    "total_cost": 37699400,
+    "currency": "INR",
+    "timeline_weeks": null,
+    "scope_coverage": [
+      "Strategy & Creative Development",
+      "TVC Development (concept only)",
+      "Social Organic Content"
+    ],
+    "key_terms": [],
+    "total_cost_usd": 452392.8
+  },
+  {
+    "vendor_name": "PixelCraft Studios",
+    "total_cost": 0,
+    "currency": "INR",
+    "timeline_weeks": 144,
+    "scope_coverage": [
+      "strategy",
+      "creative",
+      "TVC production",
+      "digital content",
+      "paid media",
+      "compliance review",
+      "program management"
+    ],
+    "key_terms": [],
+    "total_cost_usd": 0.0
+  },
+  {
+    "vendor_name": "TechCore Solutions",
+    "total_cost": 45000,
+    "currency": "USD",
+    "timeline_weeks": 3,
+    "scope_coverage": [
+      "Network Infrastructure Assessment",
+      "Infrastructure Upgrade",
+      "Security Hardening",
+      "Documentation & Training"
+    ],
+    "key_terms": [],
+    "total_cost_usd": 45000.0
+  },
+  {
+    "vendor_name": "CloudFirst Systems GmbH",
+    "total_cost": 42000,
+    "currency": "EUR",
+    "timeline_weeks": 4,
+    "scope_coverage": [
+      "Infrastructure Planning",
+      "Core Infrastructure Setup",
+      "Security & Compliance",
+      "Deployment & Optimization"
+    ],
+    "key_terms": [
+      "Network infrastructure blueprint",
+      "Security policy documentation",
+      "Staff training materials (English & German)",
+      "6 months operational handover support",
+      "Maintenance plan documentation",
+      "Disaster recovery procedures"
+    ],
+    "total_cost_usd": 45360.0
   }
 ]

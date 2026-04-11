@@ -59,14 +59,18 @@ class ScoringService:
                 vendor["scores"] = score_data
                 results.append(vendor)
             except Exception as e:
-                print(f"Error scoring vendor {vendor.get('vendor_name', 'Unknown')}: {e}")
-                # Add fallback scores
+                vendor_name = vendor.get('vendor_name', 'Unknown')
+                print(f"Error scoring vendor {vendor_name}: {e}")
+                # Add fallback scores with error message
                 vendor["scores"] = {
                     "price_score": 5,
                     "delivery_score": 5,
                     "compliance_score": 5,
                     "weighted_score": 50.0,
-                    "overall_justification": f"Scoring error: {str(e)}"
+                    "price_justification": "Fallback score",
+                    "delivery_justification": "Fallback score",
+                    "compliance_justification": "Fallback score",
+                    "overall_justification": f"Scoring error occurred, using fallback scoring: {str(e)}"
                 }
                 results.append(vendor)
         
