@@ -46,7 +46,7 @@ def log_extraction_event(vendor_name, event_type, source, details):
         "vendor_name": vendor_name,
         "event_type": event_type,
         "source": source,
-        "details": details
+        "details": details 
     }
     st.session_state.extraction_logs.append(log_entry)
     return log_entry
