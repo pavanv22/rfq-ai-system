@@ -189,14 +189,20 @@ async def upload_vendor_file(
         
         # Step 3: Extract raw text
         raw_text = extract_text(file_path)
+        print(f"[UPLOAD DEBUG] Raw text extracted: {len(raw_text) if raw_text else 0} chars")
         if not raw_text:
             raise HTTPException(
                 status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
                 detail="Failed to extract text from file"
             )
         
+        # Show first 500 chars for debugging
+        print(f"[UPLOAD DEBUG] Text preview: {raw_text[:500]}")
+        
         # Step 4: AI structured extraction
         structured_data = extract_structured_data(raw_text)
+        print(f"[UPLOAD DEBUG] Structured data: {structured_data}")
+        
         if "error" in structured_data:
             raise HTTPException(
                 status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
@@ -221,30 +227,58 @@ async def upload_vendor_file(
         # Step 8: Use provided vendor_name or use extracted name
         vendor_name_final = vendor_name or structured_data.get("vendor_name", f"Vendor_{unique_filename}")
         
-        # Step 9: Create vendor record in database
-        vendor = VendorModel(
-            id=str(uuid.uuid4()),
-            rfq_id=rfq_id,
-            vendor_name=vendor_name_final,
-            total_cost=structured_data.get("total_cost"),
-            currency=structured_data.get("currency", "USD"),
-            total_cost_usd=normalized_data.get("total_cost_usd"),
-            currency_normalized="USD",
-            timeline_weeks=structured_data.get("timeline_weeks"),
-            scope_coverage=structured_data.get("scope_coverage"),
-            key_terms=structured_data.get("key_terms"),
-            raw_extracted_data=structured_data,
-            normalized_data=normalized_data,
-            extraction_status="normalized" if not missing_fields else "incomplete",
-            missing_fields=missing_fields if missing_fields else None,
-            ai_inferred_fields=ai_inferred,
-            file_path=file_path,
-            file_type=file.content_type or file_ext
-        )
+        # Step 9: Check if vendor with same name already exists for this RFQ (UPDATE instead of CREATE)
+        existing_vendor = db.query(VendorModel).filter(
+            VendorModel.rfq_id == rfq_id,
+            VendorModel.vendor_name == vendor_name_final
+        ).first()
         
-        db.add(vendor)
-        db.commit()
-        db.refresh(vendor)
+        if existing_vendor:
+            # UPDATE existing vendor with new data
+            print(f"[UPLOAD DEBUG] Updating existing vendor: {vendor_name_final}")
+            existing_vendor.total_cost = structured_data.get("total_cost")
+            existing_vendor.currency = structured_data.get("currency", "USD")
+            existing_vendor.total_cost_usd = normalized_data.get("total_cost_usd")
+            existing_vendor.timeline_weeks = structured_data.get("timeline_weeks")
+            existing_vendor.scope_coverage = structured_data.get("scope_coverage")
+            existing_vendor.key_terms = structured_data.get("key_terms")
+            existing_vendor.raw_extracted_data = structured_data
+            existing_vendor.normalized_data = normalized_data
+            existing_vendor.extraction_status = "normalized" if not missing_fields else "incomplete"
+            existing_vendor.missing_fields = missing_fields if missing_fields else None
+            existing_vendor.ai_inferred_fields = ai_inferred
+            existing_vendor.file_path = file_path
+            existing_vendor.file_type = file.content_type or file_ext
+            
+            db.commit()
+            db.refresh(existing_vendor)
+            vendor = existing_vendor
+        else:
+            # CREATE new vendor (original behavior)
+            print(f"[UPLOAD DEBUG] Creating new vendor: {vendor_name_final}")
+            vendor = VendorModel(
+                id=str(uuid.uuid4()),
+                rfq_id=rfq_id,
+                vendor_name=vendor_name_final,
+                total_cost=structured_data.get("total_cost"),
+                currency=structured_data.get("currency", "USD"),
+                total_cost_usd=normalized_data.get("total_cost_usd"),
+                currency_normalized="USD",
+                timeline_weeks=structured_data.get("timeline_weeks"),
+                scope_coverage=structured_data.get("scope_coverage"),
+                key_terms=structured_data.get("key_terms"),
+                raw_extracted_data=structured_data,
+                normalized_data=normalized_data,
+                extraction_status="normalized" if not missing_fields else "incomplete",
+                missing_fields=missing_fields if missing_fields else None,
+                ai_inferred_fields=ai_inferred,
+                file_path=file_path,
+                file_type=file.content_type or file_ext
+            )
+            
+            db.add(vendor)
+            db.commit()
+            db.refresh(vendor)
         
         # Step 10: Save to legacy storage (for backward compatibility)
         save_vendor_data(normalized_data)

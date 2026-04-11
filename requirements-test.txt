@@ -1,0 +1,38 @@
+# Testing dependencies for RFQ-AI System
+# Install with: pip install -r requirements-test.txt
+
+# Core testing framework
+pytest==7.4.3
+pytest-asyncio==0.21.1
+pytest-cov==4.1.0
+pytest-xdist==3.5.0  # Parallel test execution
+pytest-timeout==2.2.0  # Test timeout management
+pytest-mock==3.12.0  # Mocking utilities
+
+# Coverage reporting
+coverage==7.3.2
+coverage-badge==1.1.0
+
+# HTTP testing
+httpx==0.25.1  # For async HTTP tests
+requests==2.31.0
+requests-mock==1.11.0  # Mock requests
+
+# Data validation and factories
+faker==20.1.0  # Generate fake test data
+factory-boy==3.3.0  # Test data factories
+
+# Performance testing
+locust==2.17.0  # Load testing
+memory-profiler==0.61.0  # Memory usage tracking
+
+# Database testing
+sqlite3  # Usually built-in
+
+# Utilities
+pytest-env==1.1.3  # Environment variable management
+pytest-sugar==1.0.0  # Better test output formatting
+
+# Documentation / Report generation
+pytest-html==4.1.1  # HTML test reports
+jinja2==3.1.2  # Template engine for reports

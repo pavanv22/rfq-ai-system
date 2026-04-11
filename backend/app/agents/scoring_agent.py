@@ -127,7 +127,7 @@ DO NOT include any text outside the JSON. Do not include markdown formatting.
 
     try:
         response = openai.ChatCompletion.create(
-            model="tinyllama:latest",
+            model="llama3:latest",
             messages=[
                 {"role": "user", "content": prompt}
             ],

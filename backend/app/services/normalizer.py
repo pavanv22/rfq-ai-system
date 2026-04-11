@@ -115,7 +115,7 @@ Return ONLY valid JSON, no other text.
     
     try:
         response = openai.ChatCompletion.create(
-            model="llama-3-8b",
+            model="llama3:latest",
             messages=[
                 {"role": "user", "content": prompt}
             ]

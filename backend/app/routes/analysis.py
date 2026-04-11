@@ -162,21 +162,51 @@ def run_scoring(
         )
 
 
-@router.get("/{rfq_id}/scores", response_model=list)
+@router.get("/{rfq_id}/scores")
 def get_scores(rfq_id: str, db: Session = Depends(get_db)):
     """Retrieve all scores for an RFQ, sorted by rank (highest score first)."""
     try:
-        scores = db.query(ScoreModel).filter(
-            ScoreModel.rfq_id == rfq_id
-        ).order_by(ScoreModel.weighted_score.desc()).all()
-        
-        if not scores:
+        # Verify RFQ exists
+        rfq = db.query(RFQModel).filter(RFQModel.id == rfq_id).first()
+        if not rfq:
             raise HTTPException(
                 status_code=status.HTTP_404_NOT_FOUND,
-                detail=f"No scores found for RFQ {rfq_id}"
+                detail=f"RFQ with ID {rfq_id} not found"
             )
         
-        return scores
+        # Query scores with joined vendor data
+        from sqlalchemy.orm import joinedload
+        scores = db.query(ScoreModel).filter(
+            ScoreModel.rfq_id == rfq_id
+        ).options(joinedload(ScoreModel.vendor)).order_by(
+            ScoreModel.weighted_score.desc()
+        ).all()
+        
+        # Build response with vendor names - convert to dict for JSON serialization
+        response = []
+        for score in scores:
+            score_dict = {
+                "id": score.id,
+                "rfq_id": score.rfq_id,
+                "vendor_id": score.vendor_id,
+                "vendor_name": score.vendor.vendor_name if score.vendor else "Unknown",
+                "price_score": score.price_score,
+                "delivery_score": score.delivery_score,
+                "compliance_score": score.compliance_score,
+                "weighted_score": score.weighted_score,
+                "rank": score.rank,
+                "price_justification": score.price_justification,
+                "delivery_justification": score.delivery_justification,
+                "compliance_justification": score.compliance_justification,
+                "overall_justification": score.overall_justification,
+                "created_at": score.created_at.isoformat() if score.created_at else None,
+                "updated_at": score.updated_at.isoformat() if score.updated_at else None
+            }
+            response.append(score_dict)
+        
+        # Return empty list if no scores yet (this is a valid state, not error)
+        return response if response else []
+        
     except HTTPException:
         raise
     except Exception as e:

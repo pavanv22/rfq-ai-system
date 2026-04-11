@@ -30,7 +30,7 @@ def fmt_curr(val):
 
 def tab_rfq():
     """Tab 1: RFQ Management"""
-    st.markdown("### RFQ Submission")
+    st.markdown("### 📋 RFQ Submission")
     
     tab_mode = st.radio("Action", ["Create New RFQ", "View Existing RFQs"], horizontal=True, key="rfq_action")
     
@@ -46,7 +46,7 @@ def tab_rfq():
             
             scope = st.text_area("Scope*", height=100, key="rfq_scope")
             
-            if st.form_submit_button("Create RFQ", width='stretch'):
+            if st.form_submit_button("✅ Create RFQ", use_container_width=True):
                 try:
                     payload = {
                         "project_name": project,
@@ -60,25 +60,12 @@ def tab_rfq():
                     }
                     resp = api_call("POST", "/rfq/", data=payload)
                     if "id" in resp:
-                        rfq_id = resp["id"]
-                        st.success(f"RFQ Created! ID: {rfq_id[:8]}...")
-                        st.session_state.rfq_id = rfq_id
+                        st.success(f"✅ RFQ Created! ID: {resp['id'][:8]}...")
+                        st.session_state.rfq_id = resp["id"]
                     else:
                         st.error(f"❌ Error: {resp.get('error', 'Unknown error')}")
                 except Exception as e:
                     st.error(f"❌ Error: {str(e)}")
-        
-        # Generate questions button outside the form
-        if st.session_state.get("rfq_id"):
-            st.markdown("---")
-            if st.button("🤖 Generate AI Questions", width='stretch', key=f"gen_q_{st.session_state.rfq_id}"):
-                with st.spinner("Generating questions..."):
-                    q_resp = api_call("POST", f"/rfq/{st.session_state.rfq_id}/generate-questions")
-                    if "id" in q_resp:
-                        st.success("Questions generated!")
-                        st.json(q_resp.get("questions", []))
-                    else:
-                        st.error(f"{q_resp.get('detail', 'Failed to generate questions')}")
     else:
         rfqs = api_call("GET", "/rfq/")
         if rfqs and not (isinstance(rfqs, dict) and rfqs.get("error")):
@@ -93,14 +80,14 @@ def tab_rfq():
                 } for r in rlist]
                 
                 df = pd.DataFrame(df_data)
-                st.dataframe(df[["Project", "Budget", "Timeline", "Status"]], width='stretch', hide_index=True)
+                st.dataframe(df[["Project", "Budget", "Timeline", "Status"]], use_container_width=True, hide_index=True)
                 
-                if st.button("Refresh"):
+                if st.button("🔄 Refresh"):
                     st.rerun()
 
 def tab_vendors():
     """Tab 2: Vendor Management"""
-    st.markdown("###Vendor Quotations")
+    st.markdown("### 🏢 Vendor Quotations")
     
     rfqs = api_call("GET", "/rfq/")
     if not rfqs or (isinstance(rfqs, dict) and rfqs.get("error")):
@@ -111,29 +98,29 @@ def tab_vendors():
     rfq_opts = {r["project_name"]: r["id"] for r in rlist}
     
     if not rfq_opts:
-        st.warning("No RFQs available")
+        st.warning("⚠️ No RFQs available")
         return
     
-    sel_rfq_name = st.selectbox("Select RFQ:", list(rfq_opts.keys()))
+    sel_rfq_name = st.selectbox("📋 Select RFQ:", list(rfq_opts.keys()))
     sel_rfq_id = rfq_opts[sel_rfq_name]
     
     # File upload
     st.markdown("**Upload Vendor Response** (PDF, DOCX, PPTX, XLSX, PNG, JPG, TXT)")
     file = st.file_uploader("Choose file", type=["pdf", "docx", "pptx", "xlsx", "png", "jpg", "jpeg", "txt"])
     
-    if file and st.button("Upload & Process", width='stretch'):
+    if file and st.button("📤 Upload & Process", use_container_width=True):
         with st.spinner("Processing vendor response..."):
             try:
                 files_dict = {"file": file}
                 resp = requests.post(f"{API_BASE_URL}/vendor/{sel_rfq_id}/upload", files=files_dict).json()
                 
                 if "error" not in resp:
-                    st.success(f"{resp.get('vendor_name')} processed!")
+                    st.success(f"✅ {resp.get('vendor_name')} processed!")
                     st.info(f"Status: {resp.get('extraction_status')}")
                 else:
-                    st.error(f"{resp['error']}")
+                    st.error(f"❌ {resp['error']}")
             except Exception as e:
-                st.error(f"{str(e)}")
+                st.error(f"❌ {str(e)}")
     
     # List vendors
     st.markdown("**Uploaded Vendors**")
@@ -147,13 +134,13 @@ def tab_vendors():
                 "Timeline": f"{v.get('timeline_weeks', 'N/A')}w",
                 "Status": v.get("extraction_status", "pending")
             } for v in vlist])
-            st.dataframe(df, width='stretch', hide_index=True)
+            st.dataframe(df, use_container_width=True, hide_index=True)
         else:
             st.info("No vendors uploaded yet")
 
 def tab_results():
     """Tab 3: Results & Scoring"""
-    st.markdown("### Results & Recommendations")
+    st.markdown("### 📊 Results & Recommendations")
     
     rfqs = api_call("GET", "/rfq/")
     if not rfqs or (isinstance(rfqs, dict) and rfqs.get("error")):
@@ -163,11 +150,11 @@ def tab_results():
     rlist = rfqs if isinstance(rfqs, list) else [rfqs]
     rfq_opts = {r["project_name"]: r["id"] for r in rlist}
     
-    sel_rfq_name = st.selectbox("Select RFQ:", list(rfq_opts.keys()), key="res_rfq")
+    sel_rfq_name = st.selectbox("📋 Select RFQ:", list(rfq_opts.keys()), key="res_rfq")
     sel_rfq_id = rfq_opts[sel_rfq_name]
     
     # Scoring controls
-    with st.expander("Scoring Configuration", expanded=True):
+    with st.expander("⚙️ Scoring Configuration", expanded=True):
         col1, col2, col3 = st.columns(3)
         with col1:
             p_weight = st.slider("Price %", 0.0, 1.0, 0.4, 0.05)
@@ -178,35 +165,31 @@ def tab_results():
         
         total = p_weight + d_weight + c_weight
         if abs(total - 1.0) > 0.01:
-            st.warning(f"Weights must sum to 1.0 (currently {total:.2f})")
+            st.warning(f"⚠️ Weights must sum to 1.0 (currently {total:.2f})")
         else:
-            if st.button("▶Run Scoring", width='stretch'):
+            if st.button("▶️ Run Scoring", use_container_width=True):
                 with st.spinner("Scoring vendors..."):
                     resp = api_call("POST", f"/analysis/{sel_rfq_id}/score", 
                                   params={"price_weight": p_weight, "delivery_weight": d_weight, 
                                          "compliance_weight": c_weight})
                     if resp.get("message"):
-                        st.success("Scoring completed!")
+                        st.success("✅ Scoring completed!")
                     else:
-                        st.error(f"Error: {resp.get('detail', 'Unknown error')}")
+                        st.error(f"❌ Error: {resp.get('detail', 'Unknown error')}")
     
     # Display results
     scores_resp = api_call("GET", f"/analysis/{sel_rfq_id}/scores")
-    
-    # Check for errors (backend returns "detail" for HTTP errors, "error" for exceptions)
-    has_error = isinstance(scores_resp, dict) and (scores_resp.get("error") or scores_resp.get("detail"))
-    
-    if scores_resp and not has_error:
+    if scores_resp and not (isinstance(scores_resp, dict) and scores_resp.get("error")):
         scores_list = scores_resp if isinstance(scores_resp, list) else [scores_resp]
         
         if scores_list:
-            st.markdown("####Vendor Rankings")
+            st.markdown("#### 📊 Vendor Rankings")
             
             ranking_data = []
             for score in scores_list:
                 ranking_data.append({
                     "Rank": score.get("rank", 0),
-                    "Vendor": score.get("vendor_name", "N/A")[:40],
+                    "Vendor": score.get("vendor_id", "N/A")[:20],
                     "Price": score.get("price_score", 0),
                     "Delivery": score.get("delivery_score", 0),
                     "Compliance": score.get("compliance_score", 0),
@@ -214,23 +197,23 @@ def tab_results():
                 })
             
             df_scores = pd.DataFrame(ranking_data)
-            st.dataframe(df_scores, width='stretch', hide_index=True)
+            st.dataframe(df_scores, use_container_width=True, hide_index=True)
             
             # Show details for top vendor
             if scores_list and len(scores_list) > 0:
                 best = scores_list[0]
                 st.markdown("---")
-                st.markdown(f"### RECOMMENDED: **{best.get('vendor_name', 'N/A')}**")
+                st.markdown(f"### 🏆 RECOMMENDED: **{best.get('vendor_id', 'N/A')}**")
                 col1, col2, col3, col4 = st.columns(4)
                 col1.metric("Overall Score", f"{best.get('weighted_score', 0):.1f}/100")
                 col2.metric("Price", f"{best.get('price_score', 0)}/10")
                 col3.metric("Delivery", f"{best.get('delivery_score', 0)}/10")
                 col4.metric("Compliance", f"{best.get('compliance_score', 0)}/10")
     else:
-        st.info("Run scoring to see vendor rankings and recommendation")
+        st.info("Run scoring to see results")
 
 # Main UI
-st.title("RFQ AI Vendor Evaluation System")
+st.title("📄 RFQ AI Vendor Evaluation System")
 
 tab1, tab2, tab3 = st.tabs(["RFQ Submission", "Vendor Quotations", "Results & Scoring"])
 
