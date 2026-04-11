@@ -133,19 +133,27 @@ def extract_pptx(file_path: str) -> str:
             
             # Extract text from shapes
             for shape in slide.shapes:
-                if hasattr(shape, "text") and shape.text.strip():
-                    text += shape.text + "\n"
+                if hasattr(shape, "text_frame"):
+                    try:
+                        shape_text = getattr(shape.text_frame, 'text', '').strip()
+                        if shape_text:
+                            text += shape_text + "\n"
+                    except (AttributeError, TypeError):
+                        pass
                 
                 # Extract text from tables
-                if shape.has_table:
-                    table = shape.table
-                    for row in table.rows:
-                        row_text = []
-                        for cell in row.cells:
-                            if cell.text.strip():
-                                row_text.append(cell.text.strip())
-                        if row_text:
-                            text += " | ".join(row_text) + "\n"
+                if hasattr(shape, 'has_table') and shape.has_table:
+                    try:
+                        table = shape.table
+                        for row in table.rows:
+                            row_text = []
+                            for cell in row.cells:
+                                if cell.text.strip():
+                                    row_text.append(cell.text.strip())
+                            if row_text:
+                                text += " | ".join(row_text) + "\n"
+                    except (AttributeError, TypeError):
+                        pass
     except Exception as e:
         print(f"Error extracting PPTX: {e}")
     
