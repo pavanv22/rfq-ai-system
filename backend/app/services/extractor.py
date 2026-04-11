@@ -40,14 +40,23 @@ def get_file_extension(file_path: str) -> str:
 
 def extract_text(file_path: str) -> Optional[str]:
     """
-    Extract text from various document formats.
+    Extract text from various document formats or return raw text.
     
     Args:
-        file_path: Path to the document file
+        file_path: Path to the document file OR raw text string
     
     Returns:
         Extracted text or None if extraction fails
     """
+    # Check if input looks like raw text (contains newlines or common text patterns)
+    # rather than a file path
+    if '\n' in file_path or not file_path.strip().startswith('/') and \
+       not file_path.strip()[1:3] == ':\\' and ':' not in file_path[:2]:
+        # Treat as raw text and return it as-is
+        if isinstance(file_path, str) and len(file_path) > 10:
+            return file_path
+    
+    # If not raw text, treat as file path
     if not os.path.exists(file_path):
         return None
     
@@ -133,16 +142,13 @@ def extract_pptx(file_path: str) -> str:
             
             # Extract text from shapes
             for shape in slide.shapes:
-                if hasattr(shape, "text_frame"):
-                    try:
-                        shape_text = getattr(shape.text_frame, 'text', '').strip()
-                        if shape_text:
-                            text += shape_text + "\n"
-                    except (AttributeError, TypeError):
-                        pass
+                if hasattr(shape, "text_frame") and shape.text_frame:
+                    shape_text = shape.text_frame.text.strip()
+                    if shape_text:
+                        text += shape_text + "\n"
                 
                 # Extract text from tables
-                if hasattr(shape, 'has_table') and shape.has_table:
+                if hasattr(shape, "has_table") and shape.has_table:
                     try:
                         table = shape.table
                         for row in table.rows:
@@ -152,8 +158,8 @@ def extract_pptx(file_path: str) -> str:
                                     row_text.append(cell.text.strip())
                             if row_text:
                                 text += " | ".join(row_text) + "\n"
-                    except (AttributeError, TypeError):
-                        pass
+                    except (AttributeError, KeyError):
+                        continue
     except Exception as e:
         print(f"Error extracting PPTX: {e}")
     
