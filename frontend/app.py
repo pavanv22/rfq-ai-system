@@ -19,6 +19,7 @@ def api_call(method: str, endpoint: str, data=None, files=None, params=None):
     """Make API call"""
     try:
         url = f"{API_BASE_URL}{endpoint}"
+        resp = None
         if method == "POST":
             resp = requests.post(url, files=files, json=data if not files else None)
         elif method == "GET":
@@ -28,7 +29,10 @@ def api_call(method: str, endpoint: str, data=None, files=None, params=None):
         elif method == "DELETE":
             resp = requests.delete(url)
             return {"status": "deleted"}
-        return resp.json()
+        
+        if resp is not None:
+            return resp.json()
+        return {"error": "Invalid request method"}
     except Exception as e:
         return {"error": str(e)}
 
